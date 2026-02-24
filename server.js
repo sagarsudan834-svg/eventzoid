@@ -1,3 +1,5 @@
+console.log("ENV PORT:", process.env.PORT);
+
 const express = require("express");
 const Razorpay = require("razorpay");
 const crypto = require("crypto");
@@ -45,6 +47,6 @@ app.post("/verify-payment", (req, res) => {
 });
 
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT,() => {
     console.log("Server running...");
 });
